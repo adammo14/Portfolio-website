@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Adam Chmielewski</title>
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    </head>
+
+    <body>
+
+        <i class="fa fa-bars toggle_menu" style="font-size: 4em;"></i>
+
+        <div class="sidebar_menu">
+
+        		<i class="fa fa-times" style="font-size: 4em;"></i><br><br>
+        		<center>
+        			<a href="#"><h1 class="boxed_item">Adam <span class="logo_bold">CHMIELEWSKI</span></h1>
+        		</center><br><br>
+
+            <center>
+          		<ul class="navigation_section">
+                <a href="/#1"><li class="navigation_item">HOME</li></a>
+                <a href="/web"><li class="navigation_item">WEB DEVELOPMENT</li></a>
+                <a href="/graphics"><li class="navigation_item">GRAPHICS</li></a>
+                <a href="/3d"><li class="navigation_item">3D MODELLING</li></a>
+                <a href="/about"><li class="navigation_item">ABOUT ME</li></a>
+          		</ul>
+            </center><br><br>
+
+        		<center>
+              {{#if user}}
+                <a href="/dashboard/{{user.username}}"><button class="button_side" id="signup"><i class="fa fa-user"></i> DASHBOARD</button></a><br>
+                <a href="/logout"><button class="button_side" id="login"><i class="fa fa-sign-out"></i> LOG OUT</button></a>
+              {{else}}
+                <a href="/sign_up"><button class="button_side" id="signup"><i class="fa fa-user-plus"></i> SIGN UP</button></a><br>
+                <a href="/login"><button class="button_side" id="login"><i class="fa fa-sign-in"></i> LOG IN</button></a>
+              {{/if}}
+              <div class="footer-social-icons">
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/" target="_blank" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://www.linkedin.com/" target="_blank" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        		</center>
+        </div><!-- End of sidebar -->
+
+        <section class="panel intro">
+            <div class="inner">
+                <div class="content">
+                    <h1>My Portfolio</h1><br>
+                    <button class="button_1">EXPLORE</button>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section class="panel">
+            <div class="section2" id="section2" data-section-name="home">
+                <div class="container-fluid">
+                    <h2 class="text-center">Web Development</h2><br>
+                    <div class="col-md-4">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="images/coding.png" alt="">
+                                <div class="overlay">
+                                    <h2>Layout</h2>
+                                    <p>HTML5</p>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="images/css.png" alt="">
+                                <div class="overlay">
+                                    <h2>Styling</h2>
+                                    <p>CSS3</p>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="images/js.png" alt="">
+                                <div class="overlay">
+                                    <h2>Functionality</h2>
+                                    <p>JavaScript</p>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <form class="text-center">
+                            <button class="button_2" formaction="/web">ENTER</button>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section3" id="section3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <h2 class="text-center">Graphic Design</h2>
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-8">
+
+                            <div id="my-slider" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#my-slider" data-slide-to="0" class="active"></li>
+                                    <li data-target="#my-slider" data-slide-to="1"></li>
+                                </ol>
+                                <!-- Wrapper -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="images/glitch.png" alt="1"/>
+                                        <div class="carousel-caption" id="glitch">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/planet.png" alt="2"/>
+                                        <div class="carousel-caption" id="planet">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- controls -->
+                                <a class="left carousel-control" href="#my-slider" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                </a>
+                                <a class="right carousel-control" href="#my-slider" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+
+                        </div>
+                        <div class="col-md-12">
+                            <form class="text-center">
+                                <button class="button_2" formaction="graphics.html">ENTER</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="section4">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-2">
+
+                        </div>
+
+                        <div class="col-md-8">
+                            <h2 class="text-center">Typography</h2>
+                            <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/RiVRDf9o-_o" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel">
+          <div class="section5">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                  <form id="contact" method="post" action="/">
+                    <h2 class="text-center">Contact Form</h2>
+                    <p class="text-center">If you have any questions, don't hesitate and send me a message.</p><br>
+                    <fieldset>
+                      <input placeholder="Your name" type="text" name="name" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                      <input placeholder="Your Email Address" type="email" name="email" required>
+                    </fieldset>
+                    <fieldset>
+                      <input placeholder="Your Phone Number (optional)" type="tel" name="tel">
+                    </fieldset>
+                    <fieldset>
+                      <input placeholder="Your Web Site (optional)" name="website" type="text">
+                    </fieldset>
+                    <fieldset>
+                      <textarea placeholder="Type your message here...." name="message" required></textarea>
+                    </fieldset>
+
+                    <div class="col-md-12 text-center">
+                        <button class="button_2" name="submit" type="submit">SUBMIT</button>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <a class="scroll-to-top-link glyphicon glyphicon-chevron-up"></a>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/jquery.scrollify.js"></script>
+        <script src="js/close_menu.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

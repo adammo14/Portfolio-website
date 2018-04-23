@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adam Chmielewski</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+
+    <body>
+      <i class="fa fa-bars toggle_menu" style="font-size: 4em;"></i>
+
+      <div class="sidebar_menu">
+
+          <i class="fa fa-times" style="font-size: 4em;"></i><br><br>
+          <center>
+            <a href="#"><h1 class="boxed_item">Adam <span class="logo_bold">CHMIELEWSKI</span></h1>
+          </center><br><br>
+
+          <center>
+            <ul class="navigation_section">
+              <a href="/#1"><li class="navigation_item">HOME</li></a>
+              <a href="/web"><li class="navigation_item">WEB DEVELOPMENT</li></a>
+              <a href="/graphics"><li class="navigation_item">GRAPHICS</li></a>
+              <a href="/3d"><li class="navigation_item">3D MODELLING</li></a>
+              <a href="/about"><li class="navigation_item">ABOUT ME</li></a>
+            </ul>
+          </center><br><br>
+
+          <center>
+            {{#if user}}
+              <a href="/dashboard/{{user.id}}"><button class="button_side" id="signup"><i class="fa fa-user"></i> DASHBOARD</button></a><br>
+              <a href="/logout"><button class="button_side" id="login"><i class="fa fa-sign-out"></i> LOG OUT</button></a>
+            {{else}}
+              <a href="/sign_up"><button class="button_side" id="signup"><i class="fa fa-user-plus"></i> SIGN UP</button></a><br>
+              <a href="/login"><button class="button_side" id="login"><i class="fa fa-sign-in"></i> LOG IN</button></a>
+            {{/if}}
+            <div class="footer-social-icons">
+              <ul class="social-icons">
+                  <li><a href="https://www.facebook.com/" target="_blank" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://twitter.com/" target="_blank" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+                  <li><a href="https://www.youtube.com/" target="_blank" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+                  <li><a href="https://www.linkedin.com/" target="_blank" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+              </ul>
+          </div>
+          </center>
+      </div><!-- End of sidebar -->
+
+        <div class="section1-web">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 animation enterFromLeft">
+                        <h2>My first website</h2>
+                        <p>This was my first ever attempt at making a website, needless to say it's not the best looking page you've ever seen :)<br><br>
+                        I made it in the 2nd year of College as part of Web Design module. It was meant to be a site for a fictional construction company called BowersBarr.</p>
+                    </div>
+
+                    <div class="col-md-8">
+                        <img class="img-responsive animation enterFromRight" src="images/web-old1.png" alt="My Old Website 1">
+                    </div>
+                </div>
+            </div>
+            <hr class="style-one">
+        </div>
+
+
+        <div class="section2-web">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <img class="img-responsive animation popIn" src="images/web-old2.png" alt="My Old Website 2">
+                    </div>
+
+                    <div class="col-md-4 animation popIn">
+                        <h2>Second attempt</h2>
+                        <p>This one is a little wierd...<br><br>
+                        I really enjoyed working with HTML and CSS at College so I've decided to spend some time at home to make my own website (as you can see the layout and colours are similar). The biggest problem I had was not knowing what kind of website it would be. It never went live as I was mostly learning new things and playing around with it.</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="style-one">
+        </div>
+
+
+        <div class="section3-web">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 animation enterFromLeft">
+                        <h2>Learning new things</h2>
+                        <p>At the moment I'm having a lot of fun learning some more advanced CSS features such as animations. It allows animations of HTML elements without using JavaScript or Flash.<br><br>
+                        </p>
+                    </div>
+
+                    <div class="col-md-8">
+                        <img class="img-responsive animation enterFromRight" src="images/animations.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <hr class="style-one">
+        </div>
+
+      <div class="section3-web">
+        <div class="container">
+            <ul>
+              <h2>{{title}}</h2>
+              {{#each comments}}
+                <h3>{{body}}</h3>
+                  <a href='/web/edit/{{_id}}'><button type="button" class="btn btn-warning">Edit</button></a>
+                  <a class="delete" href='/web'><button type="button" class="btn btn-danger delete" data-id="{{_id}}">Delete</button></a>
+                <h5>Written by {{author}}</h5>
+              {{/each}}
+            </ul>
+        </div>
+      </div
+
+        {{#if user}}
+          <div class="comment">
+            <div class="container">
+              <form class="comment" data-toggle="validator" role="form" method="POST" action="/web">
+                <div class="form-group">
+                  <label for="body" class="control-label col-sm-3">Comment</label>
+                  <input class="form-control" name="body" placeholder="Your message" required></input>
+                </div>
+                <button type="submit" value="submit" class="button_2">Submit</button>
+              </form>
+            </div>
+          </div>
+        {{else}}
+          <br>
+          <div class="container">
+            <p style="background: yellow;">You can only post comments if you're logged in <a href="/login">Click here to log in</a></p>
+          </div>
+        {{/if}}
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/jquery.scrollify.js"></script>
+        <script src="js/close_menu.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

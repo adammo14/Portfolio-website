@@ -1,0 +1,25 @@
+My Portfolio website which was part of the coursework for web API module.
+
+Requirements:
+
+1- User Registrations
+2- Login System and Authentication.
+3- At least two CREATE methods using POST requests to insert data in the database
+(apart from user registration or login activities)
+4- At least two UPDATE methods using PUT requests to update data in the database
+(apart from user registration or login activities)
+5- At least two DELETE methods using DELETE requests to delete data from the
+database (apart from user registration or login activities)
+6- At least two RETRIEVE methods using GET requests (apart from user registration or
+login activities)
+
+Technologies used:
+-HTML5
+-CSS
+-jQuery
+-Bootsrap
+-Node.js
+-templating engine
+
+If you are unable to view the website in the browser, here's a link to a demo video:
+https://youtu.be/5UnN9o80IU4

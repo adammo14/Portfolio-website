@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adam Chmielewski</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+
+    <body>
+      <i class="fa fa-bars toggle_menu" style="font-size: 4em;"></i>
+
+      <div class="sidebar_menu">
+
+          <i class="fa fa-times" style="font-size: 4em;"></i><br><br>
+          <center>
+            <a href="#"><h1 class="boxed_item">Adam <span class="logo_bold">CHMIELEWSKI</span></h1>
+          </center><br><br>
+
+          <center>
+            <ul class="navigation_section">
+              <a href="/#1"><li class="navigation_item">HOME</li></a>
+              <a href="/web"><li class="navigation_item">WEB DEVELOPMENT</li></a>
+              <a href="/graphics"><li class="navigation_item">GRAPHICS</li></a>
+              <a href="/3d"><li class="navigation_item">3D MODELLING</li></a>
+              <a href="/about"><li class="navigation_item">ABOUT ME</li></a>
+            </ul>
+          </center><br><br>
+
+          <center>
+            {{#if user}}
+              <a href="/dashboard/{{user.id}}"><button class="button_side" id="signup"><i class="fa fa-user"></i> DASHBOARD</button></a><br>
+              <a href="/logout"><button class="button_side" id="login"><i class="fa fa-sign-out"></i> LOG OUT</button></a>
+            {{else}}
+              <a href="/sign_up"><button class="button_side" id="signup"><i class="fa fa-user-plus"></i> SIGN UP</button></a><br>
+              <a href="/login"><button class="button_side" id="login"><i class="fa fa-sign-in"></i> LOG IN</button></a>
+            {{/if}}
+            <div class="footer-social-icons">
+              <ul class="social-icons">
+                  <li><a href="https://www.facebook.com/" target="_blank" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://twitter.com/" target="_blank" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+                  <li><a href="https://www.youtube.com/" target="_blank" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+                  <li><a href="https://www.linkedin.com/" target="_blank" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+              </ul>
+          </div>
+          </center>
+      </div><!-- End of sidebar -->
+
+        <video autoplay="true" loop>
+            <source src="/videos/iracing_sm.mp4" type="video/mp4">
+        </video>
+
+        <div class="wrap">
+            <div class="image-me">
+                <img src="images/ja.jpg" class="img-responsive" alt="Adam Chmielewski">
+            </div>
+
+            <div class="description">
+                <div class="container-fluid">
+                    <div class="col-md-3">
+
+                    </div>
+                    <!-- Description -->
+                    <div class="col-md-6">
+                        <h2>Hi</h2>
+                        <p><em>My name is Adam Chmielewski and I am a 3rd year Multimedia Computing student at Coventry University. This website was a part of my coursework for Web API Development module. I'd like to showcase some of my best work I did during my time at University as well as projects that I did in my own time.
+                        <br><br>
+                        My love for computers started when I was 12 and I built my first system on which I mostly played games. I remember it being an old Intel Pentium 4 processor with 512MB of RAM. Back then, it was a very capable machine. After I pressed the power button and it worked, I was hooked.
+                        <br><br>
+                        Outside University, I enjoy watching motorsports. I'm a huge Formula 1 and Endurance racing fan. One day, I hope to go and see a Monaco GP in person. For over 6 years, I used to be involved in SimRacing. Sim racing, is exactly what it sound like, a simulation of racing. I used a service called iRacing which is believed to be the most realistic sim out there and even professional drivers use it (I met some of them in online lobbies). My biggest accomplishments are winning the 2014 Season 3 UK Championship as well as participating in 2013 iRacing World Cup as part of Team UKI.
+                        <br><br>
+                        Once I graduate, I'd like to work as a Front-end web developer. For me, the best part about designing and building websites is the ability to show your creativity. Thank you for visiting my website.
+                        </em></p>
+                    </div>
+                    <div class="col-md-3">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/jquery.scrollify.js"></script>
+        <script src="js/close_menu.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>

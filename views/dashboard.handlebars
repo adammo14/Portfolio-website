@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Adam Chmielewski</title>
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="../js/script.js"></script>
+        <script src="../js/jquery.scrollify.js"></script>
+        <script src="../js/close_menu.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="background"></div>
+
+        <i class="fa fa-bars toggle_menu" style="font-size: 4em;"></i>
+
+        <div class="sidebar_menu">
+
+        		<i class="fa fa-times" style="font-size: 4em;"></i><br><br>
+        		<center>
+        			<a href="#"><h1 class="boxed_item">Adam <span class="logo_bold">CHMIELEWSKI</span></h1>
+        		</center><br><br>
+
+            <center>
+          		<ul class="navigation_section">
+                <a href="/#1"><li class="navigation_item">HOME</li></a>
+                <a href="/web"><li class="navigation_item">WEB DEVELOPMENT</li></a>
+                <a href="/graphics"><li class="navigation_item">GRAPHICS</li></a>
+                <a href="/3d"><li class="navigation_item">3D MODELLING</li></a>
+                <a href="/about"><li class="navigation_item">ABOUT ME</li></a>
+          		</ul>
+            </center><br><br>
+
+        		<center>
+              {{#if user}}
+                <a href="/dashboard/{{user.id}}"><button class="button_side" id="signup"><i class="fa fa-user"></i> DASHBOARD</button></a><br>
+                <a href="/logout"><button class="button_side" id="login"><i class="fa fa-sign-out"></i> LOG OUT</button></a>
+              {{else}}
+                <a href="/sign_up"><button class="button_side" id="signup"><i class="fa fa-user-plus"></i> SIGN UP</button></a><br>
+                <a href="/login"><button class="button_side" id="login"><i class="fa fa-sign-in"></i> LOG IN</button></a>
+              {{/if}}
+              <div class="footer-social-icons">
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/" target="_blank" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+                    <li><a href="https://www.linkedin.com/" target="_blank" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        		</center>
+        </div><!-- End of sidebar -->
+
+        <div class="dashboard">
+          <h1 class="text-center"><i class="fa fa-gear" aria-hidden="true"></i> DASHBOARD</h1><br>
+          <h2>Hello, {{user.username}}</h2><br>
+
+          <div class="col-md-6 dashboard-formL">
+            <h4>Current credentials</h4><br>
+            <ul style="font-size: 22px;">
+              <li>Username: {{user.username}}</li>
+              <li>Password: {{user.password2}}</li>
+              <li>Email: {{user.email}}</li>
+            </ul>
+          </div>
+          <!-- Update details right -->
+          <div class="col-md-offset-6">
+          <div class="dashboard-formR">
+            <form role="form" method="post" action="/dashboard/{{user._id}}">
+              <h4>Update your credentials</h4><br>
+              <div class="form-group">
+                <label for="inputUsername" class="control-label col-sm-3">Username</label>
+                <input type="text" class="form-control" name="username" required>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword" class="control-label col-sm-3" >Password</label>
+                <input type="password" class="form-control" name="password" required>
+              </div>
+              <div class="form-group">
+                <label for="email" class="control-label col-sm-3">Email</label>
+                <input type="email" class="form-control" name="email" required>
+              </div>
+              <div class="col-md-offset-7 form-group">
+                <button class="button_side" type="submit"><i class="fa fa-refresh" aria-hidden="true"></i> UPDATE</button>
+                <a class="delete-user" href='/#1'><button type="button" class="button_side" data-id="{{user._id}}"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete account</button></a>
+              </div>
+            </form>
+
+          </div>
+          </div>
+          <!-- Delete account bottom -->
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="../js/script.js"></script>
+        <script src="../js/jquery.scrollify.js"></script>
+        <script src="../js/close_menu.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
